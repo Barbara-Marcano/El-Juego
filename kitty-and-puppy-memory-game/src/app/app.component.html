@@ -1,0 +1,13 @@
+<header>
+  <h1>JUEGO DE MEMORIA</h1>
+  <a href="#game-container" id="new-game-button"> ¿Estás listo?</a>
+</header>
+<div class="p-16" id="game-container">
+  <p class="text-center" id="textElement"> Tienes un máximo de 10 intentos para poder ganar.
+  ¡Que la suerte este contigo!</p>
+  <p id="counterContainer">Número de intentos: <span id="counter">0</span></p>
+  <div class="grid p-16">
+    <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
+    </app-game-card>
+  </div>
+</div>
